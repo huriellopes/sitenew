@@ -156,7 +156,14 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 col-sm-12"></div>
+                <div class="col-md-6 col-sm-12">
+                    <ul>
+                        <li>Huriel Lopes</li>
+                        <ul>
+                            <li>Telefone: (61) 9 8303-8556</li>
+                        </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
