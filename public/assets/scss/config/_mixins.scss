@@ -1,0 +1,21 @@
+// Mixin Responsável pelo background Principal do site
+@mixin bg-image(
+	$image,
+	$height,
+	$repeat: no-repeat,
+	$fixed: fixed,
+	$tamanho: cover,
+	$position: top center,
+	$width: 100%,
+	){
+
+	background: {
+		image: url($image);
+		position: $position;
+		repeat: $repeat;
+		size: $tamanho;
+		attachment: $fixed;
+	}
+	max-width: $width;
+	height: $height;
+}

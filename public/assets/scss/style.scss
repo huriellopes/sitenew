@@ -1,0 +1,57 @@
+
+@import 'config/_mixins';
+
+// Cria o tema
+$my-color-1: #68C7D8;
+$my-color-2: #150578;
+$my-color-3: #0E0E52;
+$my-color-4: #4c68d7;
+$my-color-5: #FFFFFF;
+$my-color-6: #96BBBB;
+$my-color-7: #000000;
+$my-color-8: #ED1C2D;
+$my-color-9: #353334;
+
+$theme-colors:(
+	"my-color-1": $my-color-1,
+	"my-color-2": $my-color-2,
+	"my-color-3": $my-color-3,
+	"my-color-4": $my-color-4,
+	"my-color-5": $my-color-5,
+	"my-color-6": $my-color-6,
+	"my-color-7": $my-color-7,
+	"my-color-8": $my-color-8,
+	"my-color-9": $my-color-9
+);
+
+// Classes personalizadas
+$link-color: $my-color-7;
+$navbar-dark-color: $my-color-5;
+$navbar-dark-hover-color: $my-color-6 !important;
+$navbar-dark-active-color: $my-color-6 !important;
+$navbar-dark-active-color: $my-color-5 !important;
+$navbar-dark-toggler-border-color: rgba(255,255,255,0.1);
+
+// Alt da Imagem
+img[alt=''], img:not([alt]) {
+	border: 2px dashed #dc3545;
+}
+body {
+	font: {
+		family: 'Lato', sans-serif;
+		size: 16px;
+		weight: 300;
+	}
+}
+
+.inicio {
+    @include bg-image('../img/bg-topo2.jpg', 100vh);
+    min-height: 100%;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #FFFFFF;
+}
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
