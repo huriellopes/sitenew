@@ -41,7 +41,7 @@
             <div class="row mt-5 justify-content-md-center">
                 <!-- BEGIN CARD HURIEL LOPES -->
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem">
+                    <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Huriel Lopes</h5>
@@ -53,7 +53,7 @@
 
                 <!-- BEGIN CARD HiGO LAGO -->
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem">
+                    <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Higo Lago</h5>
@@ -65,7 +65,7 @@
 
                 <!-- BEGIN CARD LEORNADO LOPES -->
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem">
+                    <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Leornado Matos</h5>
@@ -88,7 +88,7 @@
 
             <div class="row mt-5">
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Desenvolvimento de WebSites</h5>
@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Desenvolvimento de Sistemas</h5>
@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Desenvolvimento Mobile</h5>
@@ -161,6 +161,7 @@
                         <li>Huriel Lopes</li>
                         <ul>
                             <li>Telefone: (61) 9 8303-8556</li>
+                            <li>Email: huriel.contato@huriellopes.com</li>
                         </ul>
                     </ul>
                 </div>
@@ -186,7 +187,7 @@
 
             <div class="row mt-3">
                 <div class="col-md-12 col-sm-12 text-center">
-                    <p>&copy; Todos os Direitos Reservados - <strong>CNPJ: </strong>32.031797/0001-80</p>
+                    <p>&copy; Todos os Direitos Reservados - <strong>CNPJ: </strong>32.031797/0001-80 - 2019/2020</p>
                 </div>
             </div>
         </div>
