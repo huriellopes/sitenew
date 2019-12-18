@@ -9,6 +9,7 @@
     <meta name="description" content="Desenvolvimento de sites web, sistemas web e aplicativos mobile, consultorias na área de TI online." />
     <title>Huriel Lopes</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <script data-ad-client="ca-pub-5408086791742896" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     @yield('style')
 </head>
 <body>
