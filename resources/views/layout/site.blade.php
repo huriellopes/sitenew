@@ -9,6 +9,9 @@
     <meta name="description" content="Desenvolvimento de sites web, sistemas web e aplicativos mobile, consultorias na área de TI online." />
     <title>Huriel Lopes</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <!-- Font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" />
+    <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}" />
     <script data-ad-client="ca-pub-5408086791742896" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     @yield('style')
 </head>
@@ -18,6 +21,10 @@
     @yield('content')
 
     <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/js/additional-methods.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.blockUI.min.js') }}"></script>
+    <script src="{{ asset('assets/js/typewriter.min.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     @yield('script')
