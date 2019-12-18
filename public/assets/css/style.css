@@ -16,8 +16,14 @@ body {
   background-size: cover;
   background-attachment: fixed;
   max-width: 100%;
-  height: 100vh;
+  height: 80vh;
   min-height: 100%;
+}
+.inicio .texto {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-top: 20%;
+  color: #FFFFFF;
 }
 
 .footer {

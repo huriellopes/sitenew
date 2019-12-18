@@ -7,8 +7,10 @@
 @section('content')
     <div class="inicio" id="inicio">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12"></div>
+            <div class="row mt-5">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <h2 id="texto" class="texto"></h2>
+                </div>
             </div>
         </div>
     </div>
@@ -23,6 +25,7 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 text-center">
                                 <h2>Sobre</h2>
+                                <h6 class="text-muted">Um pouco sobre a empresa</h6>
                             </div>
                         </div>
                         <div class="row mt-5">
@@ -39,15 +42,22 @@
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
                                 <h2>Equipe</h2>
+                                <h6 class="text-muted">Integrantes da equipe</h6>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-4 col-sm-12 mb-3">
                                 <div class="card">
                                     <img src="{{ asset('assets/img/huriellopes.png') }}" class="card-img-top" alt="Huriel Lopes" />
-                                    <div class="card-body">
+                                    <div class="card-body text-center">
                                         <h5 class="card-title text-center">Huriel Lopes</h5>
                                         <h6 class="card-subtitle text-center">CEO e Desenvolvedor</h6>
+                                        <a href="https://github.com/huriellopes" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/huriellopes/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -55,9 +65,15 @@
                             <div class="col-md-4 col-sm-12 mb-3">
                                 <div class="card">
                                     <img src="{{ asset('assets/img/higosoares.jpg') }}" class="card-img-top" alt="Higo Lago" />
-                                    <div class="card-body">
+                                    <div class="card-body text-center">
                                         <h5 class="card-title text-center">Higo Lago</h5>
                                         <h6 class="card-subtitle text-center">Desenvolvedor</h6>
+                                        <a href="https://github.com/higosoares" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/higo-soares-14303115a/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -65,9 +81,15 @@
                             <div class="col-md-4 col-sm-12 mb-3">
                                 <div class="card">
                                     <img src="{{ asset('assets/img/leonardomatos.jpg') }}" class="card-img-top" alt="Leonardo Matos" />
-                                    <div class="card-body">
+                                    <div class="card-body text-center">
                                         <h5 class="card-title text-center">Leonardo Matos</h5>
                                         <h6 class="card-subtitle text-center">Desenvolvedor</h6>
+                                        <!--<a href="" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>-->
+                                        <a href="https://www.linkedin.com/in/leonardolml/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -81,6 +103,7 @@
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
                                 <h2>Serviços</h2>
+                                <h6 class="text-muted">Serviços que realizamos</h6>
                             </div>
                         </div>
                         <div class="row mt-5">
@@ -113,12 +136,13 @@
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
                                 <h2>Contato</h2>
+                                <h6 class="text-muted">Entre em contato conosco</h6>
                             </div>
                         </div>
 
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12">
-                                <form action="" method="POST" autocomplete="off">
+                                <form action="" method="POST" autocomplete="off" id="formContact">
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
                                             <label for="nome">Nome</label>
@@ -135,8 +159,8 @@
 
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
-                                            <label for="message">Mensagem</label>
-                                            <textarea name="message" id="message" class="form-control" cols="30" rows="10"></textarea>
+                                            <label for="mensagem">Mensagem</label>
+                                            <textarea name="mensagem" id="mensagem" class="form-control" cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
 
@@ -232,4 +256,8 @@
             </div>
         </div>
     </div>
+@stop
+
+@section('script')
+    <script src="{{ asset('assets/js/script.js') }}"></script>
 @stop

@@ -45,8 +45,22 @@ body {
 }
 
 .inicio {
-    @include bg-image('../img/bg-topo2.jpg', 100vh);
+    @include bg-image('../img/bg-topo2.jpg', 80vh);
     min-height: 100%;
+
+	& .texto {
+
+		font: {
+			size: 2.5em;
+			weight: 700;
+		}
+
+		margin: {
+			top: 20%;
+		}
+
+		color: $my-color-5;
+	}
 }
 
 .footer {
