@@ -48,7 +48,7 @@ body {
     @include bg-image('../img/bg-topo2.jpg', 80vh);
     min-height: 100%;
 
-	& .texto {
+	& > .texto {
 
 		font: {
 			size: 2.5em;
