@@ -19,7 +19,7 @@ body {
   height: 80vh;
   min-height: 100%;
 }
-.inicio > .texto {
+.inicio.texto {
   font-size: 2.5em;
   font-weight: 700;
   margin-top: 20%;
