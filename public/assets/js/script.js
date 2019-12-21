@@ -165,11 +165,12 @@ const script = function () {
                         });
                     }
                 }).fail((response) => {
-                    if (response.responseJSON.code === 400) {
+                    console.log(response);
+                    if (response.code === 400) {
                         setTimeout($.unblockUI(), 1000);
                         PNotify.error({
                             title: "Ótimo!",
-                            text: response.responseJSON.message,
+                            text: response.message,
                             delay: 2000
                         });
                     }
