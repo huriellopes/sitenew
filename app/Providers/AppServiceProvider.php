@@ -10,6 +10,7 @@ use App\Interfaces\Nivels\NivelsRepositoryInterface;
 use App\Interfaces\Nivels\NivelsServiceInterface;
 use App\Interfaces\Post\PostRepositoryInterface;
 use App\Interfaces\Post\PostServiceInterface;
+use App\Interfaces\Site\SiteServiceInterface;
 use App\Interfaces\UserComment\UserCommentRepositoryInterface;
 use App\Interfaces\UserComment\UserCommentServiceInterface;
 use App\Interfaces\Users\UsersRepositoryInterface;
@@ -23,6 +24,7 @@ use App\Repository\Users\UsersRepository;
 use App\Services\Marketing\MarketingService;
 use App\Services\Nivels\NivelsService;
 use App\Services\Post\PostService;
+use App\Services\Site\SiteService;
 use App\Services\UserComment\UserCommentService;
 use App\Services\Users\UsersService;
 use Illuminate\Support\ServiceProvider;
@@ -74,6 +76,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(
             MarketingServiceInterface::class,
             MarketingService::class
+        );
+
+        $this->app->singleton(
+            SiteServiceInterface::class,
+            SiteService::class
         );
 
         $this->app->singleton(

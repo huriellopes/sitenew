@@ -25,6 +25,7 @@
     "dependencies": {
         "node-sass": "^4.13.0",
         "nodemon": "^2.0.2",
+        "pnotify": "^4.0.0",
         "t-writer.js": "^1.0.4"
     }
 }

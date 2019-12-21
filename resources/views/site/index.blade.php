@@ -1,5 +1,9 @@
 @extends('layout.site')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('assets/css/PNotifyBrightTheme.css') }}">
+@stop
+
 @section('menu')
     @include('site.includes.menu')
 @stop
@@ -51,7 +55,7 @@
                                     <img src="{{ asset('assets/img/huriellopes.png') }}" class="card-img-top" alt="Huriel Lopes" />
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center">Huriel Lopes</h5>
-                                        <h6 class="card-subtitle text-center">CEO e Desenvolvedor</h6>
+                                        <h6 class="card-subtitle text-center">CEO e Desenvolvedor Web</h6>
                                         <a href="https://github.com/huriellopes" target="_blank" title="Portfolio" class="mt-2">
                                             <i class="fab fa-github fa-1x"></i>
                                         </a>
@@ -67,7 +71,7 @@
                                     <img src="{{ asset('assets/img/higosoares.jpg') }}" class="card-img-top" alt="Higo Lago" />
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center">Higo Lago</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor</h6>
+                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
                                         <a href="https://github.com/higosoares" target="_blank" title="Portfolio" class="mt-2">
                                             <i class="fab fa-github fa-1x"></i>
                                         </a>
@@ -83,11 +87,61 @@
                                     <img src="{{ asset('assets/img/leonardomatos.jpg') }}" class="card-img-top" alt="Leonardo Matos" />
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-center">Leonardo Matos</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor</h6>
+                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
                                         <!--<a href="" target="_blank" title="Portfolio" class="mt-2">
                                             <i class="fab fa-github fa-1x"></i>
                                         </a>-->
                                         <a href="https://www.linkedin.com/in/leonardolml/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <div class="card">
+                                    <img src="https://www.w3schools.com/howto/img_avatar.png" class="card-img-top" alt="Marcus Vinicius" />
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-center">Marcus Vinicius</h5>
+                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
+                                        <!--<a href="https://github.com/huriellopes" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/huriellopes/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <div class="card">
+                                    <img src="{{ asset('assets/img/gabriel-guimaraes.jpg') }}" class="card-img-top" alt="Gabriel Guimarães" />
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-center">Gabriel Guimarães</h5>
+                                        <h6 class="card-subtitle text-center">Desenvolvedor Mobile</h6>
+                                        <a href="https://github.com/gu1ma" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/gabriel-guimarães-388a2a97/" target="_blank" title="Perfil Linkedin" class="mt-2">
+                                            <i class="fab fa-linkedin fa-1x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <div class="card">
+                                    <img src="{{ asset('assets/img/ruanaragao.jpg') }}" class="card-img-top" alt="Ruan Aragão" />
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-center">Ruan Aragão</h5>
+                                        <h6 class="card-subtitle text-center">Desenvolvedor Mobile</h6>
+                                        <a href="https://github.com/aragaoruan" target="_blank" title="Portfolio" class="mt-2">
+                                            <i class="fab fa-github fa-1x"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/aragaoruan/" target="_blank" title="Perfil Linkedin" class="mt-2">
                                             <i class="fab fa-linkedin fa-1x"></i>
                                         </a>
                                     </div>
@@ -142,7 +196,8 @@
 
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12">
-                                <form action="" method="POST" autocomplete="off" id="formContact">
+                                <form action="{{ route('site.contact') }}" method="POST" autocomplete="off" id="formContact">
+                                    @csrf
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
                                             <label for="nome">Nome</label>
@@ -215,7 +270,7 @@
                         </div> <!-- END ANUNCIOS -->
 
                         <!-- BEGIN NEWSLETTER -->
-                        <div class="newsletter" id="newsletter">
+                        <!--<div class="newsletter" id="newsletter">
                             <div class="container">
                                 <div class="row mt-3">
                                     <div class="col-md-12 col-sm-12 text-center">
@@ -226,8 +281,9 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <form action="" method="POST" id="formNewsletter" autocomplete="off">
+                                            @csrf
                                             <div class="form-row">
-                                                <div class="col-md-12 col-sm-12">
+                                                <div class="col-md-12 col-sm-12 form-group">
                                                     <div class="input-group mb-3">
                                                         <input type="text" class="form-control" name="newsletter" aria-label="Recipient's username" aria-describedby="button-addon2">
                                                         <div class="input-group-append">
@@ -239,7 +295,7 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div> <!-- END NEWSLETTER -->
                     </div>
                 </div>
@@ -259,5 +315,7 @@
 @stop
 
 @section('script')
+    <script src="{{ asset('assets/js/PNotify.js') }}"></script>
+    <!--<script src="{{ asset('assets/js/scrollreveal.js') }}"></script>-->
     <script src="{{ asset('assets/js/script.js') }}"></script>
 @stop

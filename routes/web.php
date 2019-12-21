@@ -8,6 +8,7 @@ Route::group([
     'prefix' => '/'
 ], function () {
     Route::get('/', 'Web\WebController@index')->name('site/inicial');
+    Route::post('/enviaContact', 'Api\ApiController@enviaMailContact')->name('site.contact');
 });
 
 Route::get('/login', 'Auth\AuthController@showLoginForm')->name('login');
