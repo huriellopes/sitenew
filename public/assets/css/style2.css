@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+.sobre h2, .equipe h2, .servicos h2 {
+    border-bottom: solid 3px #343a40;
+    display: inline-block;
+}
+
+/* Cards */
+.equipe .card , .servicos .card {
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* -------- Equipe --------*/
+/* ---- Cards ---- */
+.equipe .card .card-foto {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    width: 128px;
+    height: 128px;
+    margin: -80px auto 20px auto;
+}
+.equipe .card .card-foto:hover img {
+    -ms-transform: scale(1.2) translateZ(0);
+    -webkit-transform: scale(1.2) translateZ(0);
+    /* transform: scale(1.2) translateZ(0); */
+}
+.equipe .card .card-foto img {
+    display: block;
+    position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+    width: 100%;
+    height: auto;
+}
+.equipe .card .card-foto:hover .card-social {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.equipe .card .card-foto ul {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%) translateZ(0);
+    -webkit-transform: translateY(-50%) translateZ(0);
+    -ms-transform: translateY(-50%) translateZ(0);
+}
+.equipe .card .card-foto ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+}
+.equipe .card .card-foto ul > li a {
+    border-color: #fff;
+    color: #fff;
+    padding: .2rem .5rem;
+    border-radius: 50%;
+}
+.equipe .card .card-social {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.equipe .card .card-body {
+    height: 240px;
+}
+.equipe .card .card-body .card-title {
+    height: 30px;
+}
+.equipe .card .card-body .card-subtitle {
+    height: 50px;
+}
+
+/* -------- Serviços --------*/
+/* ---- Cards ---- */
+.servicos .card .card-foto {
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.servicos .card .card-body {
+    height: 430px;
+    text-align: justify;
+}
+.servicos .card .card-body .card-title {
+    height: 50px;
+}

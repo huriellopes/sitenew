@@ -8,19 +8,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#inicio"><i class="fas fa-home"></i> Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre</a>
+                    <a class="nav-link" href="#sobre"><i class="fas fa-address-card"></i> Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#equipe">Equipe</a>
+                    <a class="nav-link" href="#equipe"><i class="fas fa-users"></i> Equipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#servicos">Serviços</a>
+                    <a class="nav-link" href="#servicos"><i class="fas fa-terminal"></i> Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
+                    <a class="nav-link" href="#contato"><i class="fas fa-envelope"></i> Contato</a>
                 </li>
             </ul>
         </div>

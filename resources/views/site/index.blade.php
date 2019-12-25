@@ -1,4 +1,4 @@
-@extends('layout.site')
+@extends('site.layout.site')
 
 @section('style')
     <link rel="stylesheet" href="{{ asset('assets/css/PNotifyBrightTheme.css') }}">
@@ -24,12 +24,12 @@
             <!-- BEGIN CONTENT -->
             <div class="col-md-8 col-sm-12">
                 <!-- BEGIN ABOUT -->
-                <div class="sobre" id="sobre">
+                <div class="sobre mb-5" id="sobre">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <h2>Sobre</h2>
-                                <h6 class="text-muted">Um pouco sobre a empresa</h6>
+                                <h2 class="font-italic">Sobre</h2>
+                                <h5 class="text-muted">Um pouco sobre a empresa</h5>
                             </div>
                         </div>
                         <div class="row mt-5">
@@ -39,144 +39,107 @@
                         </div>
                     </div>
                 </div> <!-- END ABOUT -->
-                
+
                 <!-- BEGIN EQUIPE -->
-                <div class="equipe" id="equipe">
+                <div class="equipe border-top mb-5" id="equipe">
                     <div class="container">
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <h2>Equipe</h2>
-                                <h6 class="text-muted">Integrantes da equipe</h6>
+                                <h2 class="font-italic">Equipe</h2>
+                                <h5 class="text-muted">Integrantes da equipe</h5>
                             </div>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="{{ asset('assets/img/huriellopes.png') }}" class="card-img-top" alt="Huriel Lopes" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Huriel Lopes</h5>
-                                        <h6 class="card-subtitle text-center">CEO e Desenvolvedor Web</h6>
-                                        <a href="https://github.com/huriellopes" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/huriellopes/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>
-                                    </div>
+                            @php
+                                $usuarios = [
+                                    'huriel' => [
+                                        'imagem'=> asset('assets/img/huriellopes.png'), 'github' => 'https://github.com/huriellopes',
+                                        'linkedin' => 'https://www.linkedin.com/in/huriellopes/','titulo' => 'Huriel Lopes',
+                                        'subtitulo' => 'CEO e Desenvolvedor Web'
+                                    ],
+                                    'higo' => [
+                                        'imagem'=> asset('assets/img/higosoares.jpg'), 'github' => 'https://github.com/higosoares',
+                                        'linkedin' => 'https://www.linkedin.com/in/higo-soares-14303115a/', 'titulo' => 'Higo Lago',
+                                        'subtitulo' => 'Desenvolvedor Web'
+                                    ],
+                                    'leo' => [
+                                        'imagem'=> asset('assets/img/leonardomatos.jpg'), 'github' => '',
+                                        'linkedin' => 'https://www.linkedin.com/in/leonardolml/', 'titulo' => 'Leonardo Matos',
+                                        'subtitulo' => 'Desenvolvedor Web'
+                                    ],
+                                    'marcus' => [
+                                        'imagem'=> 'https://www.w3schools.com/howto/img_avatar.png', 'github' => '',
+                                        'linkedin' => '','titulo' => 'Marcus Vinicius',
+                                        'subtitulo' => 'Desenvolvedor Web'
+                                    ],
+                                    'gabriel' => [
+                                        'imagem'=> asset('assets/img/gabriel-guimaraes.jpg'), 'github' => '',
+                                        'linkedin' => 'https://www.linkedin.com/in/gabriel-guimarães-388a2a97/', 'titulo' => 'Gabriel Guimarães',
+                                        'subtitulo' => 'Desenvolvedor Mobile'
+                                    ],
+                                    'ruan' => [
+                                        'imagem'=> asset('assets/img/ruanaragao.jpg'), 'github' => 'https://github.com/aragaoruan',
+                                        'linkedin' => 'https://www.linkedin.com/in/aragaoruan/', 'titulo' => 'Ruan Aragão',
+                                        'subtitulo' => 'Desenvolvedor Mobile'
+                                    ]
+                                ];
+                            @endphp
+                            @foreach($usuarios as $usuario)
+                                <div class="col-md-4 col-sm-12 mb-3">
+                                    @cardUser
+                                        @slot('imagem', $usuario['imagem'])
+                                        @slot('github', $usuario['github'])
+                                        @slot('linkedin', $usuario['linkedin'])
+                                        @slot('titulo', $usuario['titulo'])
+                                        @slot('subtitulo', $usuario['subtitulo'])
+                                    @endcardUser
                                 </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="{{ asset('assets/img/higosoares.jpg') }}" class="card-img-top" alt="Higo Lago" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Higo Lago</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
-                                        <a href="https://github.com/higosoares" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/higo-soares-14303115a/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="{{ asset('assets/img/leonardomatos.jpg') }}" class="card-img-top" alt="Leonardo Matos" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Leonardo Matos</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
-                                        <!--<a href="" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>-->
-                                        <a href="https://www.linkedin.com/in/leonardolml/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mt-5">
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="https://www.w3schools.com/howto/img_avatar.png" class="card-img-top" alt="Marcus Vinicius" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Marcus Vinicius</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor Web</h6>
-                                        <!--<a href="https://github.com/huriellopes" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/huriellopes/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>-->
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="{{ asset('assets/img/gabriel-guimaraes.jpg') }}" class="card-img-top" alt="Gabriel Guimarães" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Gabriel Guimarães</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor Mobile</h6>
-                                        <a href="https://github.com/gu1ma" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/gabriel-guimarães-388a2a97/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-4 col-sm-12 mb-3">
-                                <div class="card">
-                                    <img src="{{ asset('assets/img/ruanaragao.jpg') }}" class="card-img-top" alt="Ruan Aragão" />
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title text-center">Ruan Aragão</h5>
-                                        <h6 class="card-subtitle text-center">Desenvolvedor Mobile</h6>
-                                        <a href="https://github.com/aragaoruan" target="_blank" title="Portfolio" class="mt-2">
-                                            <i class="fab fa-github fa-1x"></i>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/aragaoruan/" target="_blank" title="Perfil Linkedin" class="mt-2">
-                                            <i class="fab fa-linkedin fa-1x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div> <!-- END EQUIPE -->
-                
+
                 <!-- BEGIN SERVIÇO -->
-                <div class="servicos" id="servicos">
+                <div class="servicos border-top mb-5" id="servicos">
                     <div class="container">
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <h2>Serviços</h2>
-                                <h6 class="text-muted">Serviços que realizamos</h6>
+                                <h2 class="font-italic">Serviços</h2>
+                                <h5 class="text-muted">Serviços que realizamos</h5>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-6 col-sm-12 mb-3">
                                 <div class="card">
-                                    <img src="{{ asset('assets/img/desenvolvimento-sistema.png') }}" class="card-img-top" alt="Desenvolvimento de Sistemas" />
+                                    <div class="card-foto">
+                                        <img src="{{ asset('assets/img/desenvolvimento-sistema.png') }}" class="card-img-top" alt="Desenvolvimento de Sistemas" />
+                                    </div>
                                     <div class="card-body">
-                                        <h5 class="card-title text-center">Desenvolvimento de Sistemas</h5>
-                                        <p class="card-text">Desenvolvemos sistemas web altamente seguros e fácil usuabilidade, pensando no usuário, pensando na proteção de dados de consumidores.</p>
+                                        <div class="card-title text-center">
+                                            <h5>Desenvolvimento de Sistemas</h5>
+                                        </div>
+                                        <p class="card-text">
+                                            Realizamos o desenvolvimentos de sistemas web com foco em segurança da informação, performace, usabilidade e confiabilidade para entregarmos um produto de qualidade.
+                                            Todo o processo para a entrega dos sistemas e escolha das ferramenta que atenda as necessidades dos usuários é bem planejamento a fim de para garantir um bom funcionamento e manutenções futuras.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-sm-12 mb-3">
                                 <div class="card">
-                                    <img src="{{ asset('assets/img/desenvolvimento-mobile.png') }}" class="card-img-top" alt="Desenvolvimento Mobile" />
+                                    <div class="card-foto">
+                                        <img src="{{ asset('assets/img/desenvolvimento-mobile.png') }}" class="card-img-top" alt="Desenvolvimento Mobile" />
+                                    </div>
                                     <div class="card-body">
-                                        <h5 class="card-title text-center">Desenvolvimento Mobile</h5>
-                                        <p class="card-text">Desenvolvimento de aplicativos mobiles, com fácil usuabilidade, agregando no trabalho da empresa.</p>
+                                        <div class="card-title text-center">
+                                            <h5>Desenvolvimento Mobile</h5>
+                                        </div>
+                                        <p class="card-text">
+                                            Visando a necessidades de termos sempre toda a informação na palma da mão também realizamos o desenvolvimento de aplicativos móveis.
+                                            Pensamos bastante na experiência do experiência como principal foco no aplicativo tendo como base uma boa performace, adequação com os diversos tipos
+                                            de celulares, segurança, integração com outros sistemas e assim garantindo uma melhor satisfação ao interagir com sua empresa.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -185,12 +148,12 @@
                 </div> <!-- END SERVICES -->
 
                 <!-- BEGIN CONTACT -->
-                <div class="contato" id="contato">
+                <div class="contato border-top" id="contato">
                     <div class="container">
                         <div class="row mt-5">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <h2>Contato</h2>
-                                <h6 class="text-muted">Entre em contato conosco</h6>
+                                <h2 class="font-italic">Contato</h2>
+                                <h5 class="text-muted">Entre em contato conosco</h5>
                             </div>
                         </div>
 
@@ -201,27 +164,43 @@
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
                                             <label for="nome">Nome</label>
-                                            <input type="text" id="nome" name="nome" class="form-control" autocomplete="off" />
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <i class="far fa-user"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="nome" name="nome" class="form-control" autocomplete="off"
+                                                placeholder="Nome"/>
+                                            </div>
                                         </div>
                                     </div>
-                                    
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" id="email" name="email" class="form-control" autocomplete="off" />
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <i class="fas fa-envelope"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="email" id="email" name="email" class="form-control" autocomplete="off"
+                                                placeholder="Email"/>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
                                             <label for="mensagem">Mensagem</label>
-                                            <textarea name="mensagem" id="mensagem" class="form-control" cols="30" rows="10"></textarea>
+                                            <textarea name="mensagem" id="mensagem" class="form-control" cols="30" rows="10"
+                                            placeholder="Mensagem"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="col-md-12 col-sm-12 form-group">
-                                            <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                                            <button type="submit" class="btn btn-dark"><i class="fas fa-paper-plane"></i> Enviar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -277,7 +256,7 @@
                                         <h5>Newsletter</h5>
                                     </div>
                                 </div>
-    
+
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <form action="" method="POST" id="formNewsletter" autocomplete="off">
@@ -296,7 +275,7 @@
                                     </div>
                                 </div>
                             </div>-->
-                        </div> <!-- END NEWSLETTER -->
+                        <!--</div> --> <!-- END NEWSLETTER -->
                     </div>
                 </div>
             </div> <!-- END SIDEMENU -->
