@@ -120,7 +120,7 @@
                                         </div>
                                         <p class="card-text">
                                             Realizamos o desenvolvimentos de sistemas web com foco em segurança da informação, performace, usabilidade e confiabilidade para entregarmos um produto de qualidade.
-                                            Todo o processo para a entrega dos sistemas e escolha das ferramenta que atenda as necessidades dos usuários é bem planejamento a fim de para garantir um bom funcionamento e manutenções futuras.
+                                            Todo o processo para a entrega dos sistemas e escolha das ferramentas que atendam as necessidades dos usuários são bem planejados a fim de para garantir um bom funcionamento e manutenções futuras.
                                         </p>
                                     </div>
                                 </div>
@@ -136,9 +136,9 @@
                                             <h5>Desenvolvimento Mobile</h5>
                                         </div>
                                         <p class="card-text">
-                                            Visando a necessidades de termos sempre toda a informação na palma da mão também realizamos o desenvolvimento de aplicativos móveis.
+                                            Visando a necessidades de termos sempre toda a informação na palma da mão, também realizamos o desenvolvimento de aplicativos móveis.
                                             Pensamos bastante na experiência do experiência como principal foco no aplicativo tendo como base uma boa performace, adequação com os diversos tipos
-                                            de celulares, segurança, integração com outros sistemas e assim garantindo uma melhor satisfação ao interagir com sua empresa.
+                                            de celulares, segurança e integração com outros sistemas, e assim, garantindo uma melhor satisfação ao interagir com sua empresa.
                                         </p>
                                     </div>
                                 </div>
