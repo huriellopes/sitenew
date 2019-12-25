@@ -27,6 +27,8 @@ use App\Services\Post\PostService;
 use App\Services\Site\SiteService;
 use App\Services\UserComment\UserCommentService;
 use App\Services\Users\UsersService;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -112,7 +114,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         if (env("APP_ENV") == "production") {
-            \URL::forceScheme('https');
+            URL::forceScheme('https');
         }
+
+        Blade::component('site.components.card-user', 'cardUser');
     }
 }

@@ -58,7 +58,7 @@ const script = function () {
             unhighlight: function (element, errorClass, validClass) {
                 $(element).parent('[class*="form-group"]').addClass('is-valid').removeClass('is-invalid');
             },
-            
+
             submitHandler: function(form) {
                 console.log(form);
             }
@@ -105,12 +105,12 @@ const script = function () {
 
         formContact.validate({
             errorElement: "span",
-            errorClass: "help-block",
+            errorClass: "invalid-feedback",
             focusInvalid: true,
             rules: rules,
             messages: messages,
             errorPlacement: function (error, element) {
-                error.addClass('help-block');
+                error.addClass('invalid-feedback');
 
                 error.insertAfter(element);
             },
@@ -149,11 +149,11 @@ const script = function () {
                     },
                 }).done((response) => {
                     if (response.code === 200) {
-                        
+
                         setTimeout($.unblockUI(), 1000);
-                        
+
                         formContact.trigger('reset');
-                        
+
                         $("#nome").removeClass('is-valid');
                         $("#email").removeClass('is-valid');
                         $("#mensagem").removeClass('is-valid');
